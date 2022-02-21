@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Fit Finder 5000</title>
+        <meta name="author" content="R. Sims">
+        <meta name="description" content="An Easy Way to Start Your Day">
+        <link rel="stylesheet" href="main-style.css">
+        <script src="main-script.js" defer></script> 
+    </head>
+
+    <body>
+        <h1 class="welcome-message">Let's Get You Lookin Spiffy</h1>
+        <main class="flex-container">
+
+            <!-- BUTTON FOR RANDOMIZING -->
+            <div class="Randomizer"> 
+                <Button id="ran-btn" onClick="makeSuggestion()">Find Fit!</Button>
+            </div>
+
+            <!-- DISPLAY AREA FOR TOPS -->
+            <div class="display-area-tops border-pink">
+                <h3>Top</h3>
+                <img id="top" src="Images/Question-mark-2.png" alt="Top" width="120" height="120">
+            </div>
+
+            <!-- DISPLAY AREA FOR BOTTOMS -->
+            <div class="display-area-bottoms border-pink">
+                <h3>Bottoms</h3>
+                <img id="bottoms" src="Images/Question-mark-2.png" alt="Bottoms" width="120" height="120">
+            </div>
+
+            <!-- DISPLAY AREA FOR SHOES -->
+            <div class="display-area-shoes border-pink">
+                <h3>Shoes</h3>
+                <img id="shoes" src="Images/Question-mark-2.png" alt="Shoes" width="120" height="120">
+            </div>
+
+            <div class="fit-suggestion">
+                <p id="para"></p>
+                <p id="para2"></p>
+            </div>
+
+            
+
+        </main>
+
+        
+
+    </body>
+</html>

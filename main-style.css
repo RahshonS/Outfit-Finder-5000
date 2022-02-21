@@ -1,0 +1,64 @@
+/* ----------------------- GENERAL RULES 
+-------------------- */
+body{
+    margin:0;
+    background-color: beige;
+}
+
+.h3{
+    text-align:center;
+}
+
+
+/* ----------------------- CLASSES
+-------------------- */
+.welcome-message{
+    margin-top:0;
+    padding:5px;
+    border-style:solid;
+    text-align:center;
+}
+
+
+.border-pink{
+    border-style:solid;
+    border-color:pink;
+}
+
+.display-area-tops{
+    /* border-style:solid; */
+    border-color:black;
+    border-width:4px;
+    align-content:center;
+}
+
+.display-area-bottoms{
+    /* border-style:solid; */
+    border-color:gray;
+    border-width:4px;
+    align-content:center;
+}
+
+.display-area-shoes{
+    /* border-style:solid; */
+    border-width:4px;
+    border-color:green;
+    align-content:center;
+}
+
+.flex-container{
+    display:flex;               /* Ensures children are flex items. Direct chilren are flex items automatically */
+    flex-direction:column;          
+    justify-content:center; 
+    align-items:center; 
+}
+
+/* ------------------------- IDs
+-------------------- */
+#ran-btn{
+    box-sizing:border-box;
+    border: none;
+    background-color: #3e68ff;
+    border-radius:15px;
+    padding:3px;
+}
