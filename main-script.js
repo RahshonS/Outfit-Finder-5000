@@ -1,7 +1,9 @@
 //3 Arrays representing the three clothing categories 
+/*
 let tops = ['playboy letter', 'Lil Peep hoodie', 'Green Hoodie', 'Black playboy hoodie', 'Pink Sweater'];
 let bottoms = ['Black Playboy Pants', 'Cheetah Shorts', 'Orange Sweats', 'Jeans'];
 let shoes = ['Spiked boots', 'Black Uggs', 'Purp Uggs'];
+*/
 
 let ranBtn = document.getElementById('ran-btn');
 
@@ -56,10 +58,65 @@ let imgBottoms = [greySweats.src, blackJeans.src, blueJeans.src];
 let imgShoes = [adidasShoes.src, nikeShoes.src];
 
 
+
+
+/*--- PERSONAL TOPS ---*/
+let myTop1 = new Image(125, 125);
+myTop1.src = 'myClothes/Tops/Jacket-Tan.JPG';
+
+let myTop2 = new Image(125, 125);
+myTop2.src = 'myClothes/Tops/Jacket-Tye.JPG';
+
+let myTop3 = new Image(125, 125);
+myTop3.src = 'myClothes/Tops/Hoodie-Green.JPG';
+
+let myTop4 = new Image(125, 125);
+myTop4.src = 'myClothes/Tops/Hoodie-Checkered.JPG';
+
+let myTop5 = new Image(125, 125);
+myTop5.src = 'myClothes/Tops/ShortShirt-Pink.JPG';
+
+
+
+/*--- PERSONAL BOTTOMS ---*/
+let myPants1 = new Image(125, 125);
+myPants1.src = 'myClothes/Bottoms/Pants-Black.JPG';
+
+let myPants2 = new Image(125, 125);
+myPants2.src = 'myClothes/Bottoms/Pants-Gray.JPG';
+
+
+/*--- PERSONAL SHOES ---*/
+let mySneaker1 = new Image(125, 125);
+mySneaker1.src = 'myClothes/Shoes/Sneakers-Vans.JPG';
+
+let mySneaker2 = new Image(125, 125);
+mySneaker2.src = 'myClothes/Shoes/Sneakers-Vans2.JPG';
+
+
+let myBoots1 = new Image(125, 125);
+myBoots1.src = 'myClothes/Shoes/Boots-Brown.JPG';
+
+let myShoes1 = new Image(125, 125);
+myShoes1.src = 'myClothes/Shoes/Shoes-Gray.JPG';
+
+let mySneaker3 = new Image(125, 125);
+mySneaker3.src = 'myClothes/Shoes/Sneakers-Nike.JPG';
+
+
+let myTops = [myTop1.src, myTop2.src, myTop3.src, myTop4.src, myTop5.src,];
+let myBottoms = [myPants1.src, myPants2.src];
+let myShoes = [mySneaker1.src, mySneaker2.src, mySneaker3.src, myBoots1.src, myShoes1.src];
+
+
+
 //Functions: getRanNum(), getTop(), getBottoms(), getShoes(), addShirt(), addPants(), addShoes(), countUniqueFits(), addShirt(), addBottoms(), addShoes()
 //deleteShirt(), deleteBottoms(), deleteShoes()
 
-//Select a random article of clothing from each clothing category and display it into its respective area 
+//Select a random article of clothing from each clothing category and display it into its respective area
+function makeSuggestion(){
+
+
 ranBtn.addEventListener('click', () => {
     let top = getTop();
     let bottoms = getBottoms();
@@ -91,7 +148,8 @@ ranBtn.addEventListener('click', () => {
 
     document.getElementById("shoes").src = shoes;
     //document.getElementById('shoes').src = nikeShoes.src;
-});
+})
+};
 
 //getTop(): 
 //Parameters: None
@@ -99,12 +157,12 @@ ranBtn.addEventListener('click', () => {
 //Process the number of elements in this array, use the number of elements in this array to generate a random number, use that random number to return a random
 //article of clothing from the top category
 function getTop(){
-    let numOfTops = imgTops.length;
+    let numOfTops = myTops.length;
     //console.log('You have ' + numOfTops + ' tops');
 
     let ranNum = getRanNum(numOfTops);
 
-    let topSuggestion = imgTops[ranNum];
+    let topSuggestion = myTops[ranNum];
 
     
 
@@ -118,12 +176,12 @@ function getTop(){
 //Process the number of elements in this array, use the number of elements in this array to generate a random number, use that random number to return a random
 //article of clothing from the BOTTOMS category
 function getBottoms(){
-    let numOfBottoms = imgBottoms.length;
+    let numOfBottoms = myBottoms.length;
     //console.log('You have ' + numOfBottoms + ' pairs of bottoms');
 
     let randomNum = getRanNum(numOfBottoms);
 
-    let bottomsSuggestion = imgBottoms[randomNum];
+    let bottomsSuggestion = myBottoms[randomNum];
 
     
 
@@ -139,12 +197,12 @@ function getBottoms(){
 //Process the number of elements in this array, use the number of elements in this array to generate a random number, use that random number to return a random
 //article of clothing from the SHOE category
 function getShoes(){
-    let numOfShoes = imgShoes.length;
+    let numOfShoes = myShoes.length;
     //console.log('You have ' + numOfShoes + ' pairs of shoes');
 
     let randomNum = getRanNum(numOfShoes);
 
-    let shoesSuggestion = imgShoes[randomNum];
+    let shoesSuggestion = myShoes[randomNum];
 
     
 
